@@ -45,6 +45,6 @@ public class Main2477 {
 
         int sum = (row_max * col_max - result[0] * result[1]) * K;
         System.out.println(sum);
-        
+
     }
 }
