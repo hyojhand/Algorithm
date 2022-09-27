@@ -1,4 +1,4 @@
-package Baekjoon.DynamicProgramming;
+package Baekjoon.DP;
 
 import java.io.BufferedReader;
 import java.io.IOException;
