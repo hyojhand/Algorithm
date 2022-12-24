@@ -1,8 +1,9 @@
-package Baekjoon.DP;
+package Baekjoon.DP.LCS;
 
 import java.io.*;
-// G5 공통 부분 문자열 - LCS(SubString) 공통 부분 문자열 중에서 연속된 문자의 가장 긴 문자열의 길이 구하기
-public class Main5582 {
+// G5 LCS - Longest Common Subsequence, 최장 공통 부분 수열
+// 떨어진 단어라도 모두의 부분 수열이 되는 수열 중 가장 긴 것을 찾는 문제
+public class Main9251 {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
@@ -13,14 +14,13 @@ public class Main5582 {
 
         int[][] dp = new int[len_A + 1][len_B + 1];
 
-        int max = 0;
         for (int i = 1; i <= len_A; i++) {
             for (int j = 1; j <= len_B; j++) {
                 if (str_A.charAt(i-1) == str_B.charAt(j-1)) dp[i][j] = dp[i - 1][j - 1] + 1;
-                max = Math.max(max, dp[i][j]);
+                else dp[i][j] = Math.max(dp[i - 1][j], dp[i][j - 1]);
             }
         }
 
-        System.out.println(max);
+        System.out.println(dp[len_A][len_B]);
     }
 }
