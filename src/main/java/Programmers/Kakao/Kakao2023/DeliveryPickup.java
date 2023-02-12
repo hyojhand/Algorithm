@@ -1,4 +1,4 @@
-package Programmers.Level2;
+package Programmers.Kakao.Kakao2023;
 
 import java.util.*;
 

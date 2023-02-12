@@ -1,4 +1,4 @@
-package Programmers.Level2;
+package Programmers.Kakao.Kakao2023;
 
 // 2023 KAKAO BLIND RECRUITMENT - 이모티콘 할인행사
 // 각 이모티콘은 10%, 20%, 30%, 40%의 4가지 할인율
