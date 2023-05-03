@@ -1,4 +1,4 @@
-package Programmers.Kakao.Kakako2018;
+package Programmers.Kakao.Kakao2018;
 
 import java.util.*;
 import java.util.regex.Pattern;

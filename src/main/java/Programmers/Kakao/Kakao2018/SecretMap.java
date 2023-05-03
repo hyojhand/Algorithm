@@ -1,4 +1,4 @@
-package Programmers.Kakao.Kakako2018;
+package Programmers.Kakao.Kakao2018;
 
 // 2018 KAKAO BLIND RECRUITMENT - [1차] 비밀지도
 // 각 숫자를 2진수로 변경한다 - Integer.toString(number, 2)

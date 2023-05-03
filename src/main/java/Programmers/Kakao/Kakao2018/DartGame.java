@@ -1,4 +1,4 @@
-package Programmers.Kakao.Kakako2018;
+package Programmers.Kakao.Kakao2018;
 
 // 2018 KAKAO BLIND RECRUITMENT - [1차] 다트 게임
 // 최소 숫자 1개와 보너스 1개문자를 가지므로, 2개로 문자를 분리한다.
