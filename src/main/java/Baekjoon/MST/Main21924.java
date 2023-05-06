@@ -128,3 +128,101 @@ public class Main21924 {
     }
 }
 
+
+/**
+ * 2번째 방법
+ * union find를 활용한 크루스칼 알고리즘으로, 최적화를 위해 path compression 으로 시간초과를 해결하는게 중요
+ */
+//public class Main {
+//    static int[] parents;
+//
+//    public static void main(String[] args) throws IOException {
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        StringTokenizer st = new StringTokenizer(br.readLine());
+//        int N = Integer.parseInt(st.nextToken());
+//        int M = Integer.parseInt(st.nextToken());
+//
+//        // 총 비용
+//        long sum = 0;
+//
+//        Node[] nodes = new Node[M];
+//        for (int i = 0; i < M; i++) {
+//            st = new StringTokenizer(br.readLine());
+//            int from = Integer.parseInt(st.nextToken());
+//            int to = Integer.parseInt(st.nextToken());
+//            int weight = Integer.parseInt(st.nextToken());
+//
+//            nodes[i] = new Node(from, to, weight);
+//            sum += weight;
+//        }
+//
+//        Arrays.sort(nodes);
+//
+//        parents = new int[N + 1];
+//        makeSet(N);
+//
+//        long answer = 0;
+//        // 사이클이 존재하는지 확인하면서 최소비용으로 연결
+//        int count = 0;
+//        for (Node node : nodes) {
+//            if (union(node.from, node.to)) {
+//                count++;
+//                answer += node.weight;
+//            }
+//
+//            // 모든 지점 방문시 break
+//            if (count == N - 1) {
+//                break;
+//            }
+//        }
+//
+//        answer = sum - answer;
+//
+//        if (count != N - 1) {
+//            answer = -1;
+//        }
+//
+//        System.out.println(answer);
+//    }
+//
+//    private static void makeSet(int N) {
+//        for (int i = 1; i <= N; i++) {
+//            parents[i] = i;
+//        }
+//    }
+//
+//    private static int findSet(int number) {
+//        if (parents[number] == number) {
+//            return number;
+//        }
+//
+//        return parents[number] = findSet(parents[number]);
+//    }
+//
+//    private static boolean union(int a, int b) {
+//        int aRoot = findSet(a);
+//        int bRoot = findSet(b);
+//
+//        if (aRoot == bRoot) {
+//            return false;
+//        }
+//
+//        parents[bRoot] = aRoot;
+//        return true;
+//    }
+//
+//    static class Node implements Comparable<Node> {
+//        int from, to, weight;
+//
+//        public Node(int from, int to, int weight) {
+//            this.from = from;
+//            this.to = to;
+//            this.weight = weight;
+//        }
+//
+//        @Override
+//        public int compareTo(Node n) {
+//            return this.weight - n.weight;
+//        }
+//    }
+//}
